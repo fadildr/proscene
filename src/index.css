@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.activeHome {
+  color: #2563eb; /* Ganti dengan warna teks yang Anda inginkan */
+  border-bottom: 2px solid #2563eb; /* Ganti dengan warna dan ketebalan garis bawah yang Anda inginkan */
+}

@@ -1,0 +1,27 @@
+# dependencies
+/node_modules
+/packages/**/.next
+/packages/**/node_modules
+.env*
+!.env.example
+yarn-error.log
+/dist
+.DS_Store
+.idea
+.idea/addons.bri.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.cache
+
+# yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Next.js
+.next
