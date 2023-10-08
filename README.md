@@ -1,4 +1,6 @@
-# Proscene (Website Movie)
+# [Proscene (Website Movie)](https://proscenema.vercel.app/)
+
+![Image Banner](src/assets/images/banner.jpeg)
 
 ## Features
 
@@ -13,7 +15,7 @@
 
 ## Demo
 
-Check out the [live demo](https://country-engine-fadil.vercel.app/) of this project.
+Check out the [live demo](https://proscenema.vercel.app/) of this project.
 
 ## Requirements
 

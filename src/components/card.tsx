@@ -28,9 +28,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   const navigate = useNavigate();
   const truncatedDescription =
-    description && description?.length >= 120
-      ? description?.slice(0, 120) + "..."
-      : window.innerWidth <= 768
+    description && window.innerWidth <= 768
       ? description?.slice(0, 65) + "..."
       : window.innerWidth <= 1024
       ? description?.slice(0, 100) + "..."
@@ -62,7 +60,11 @@ const Card: React.FC<CardProps> = ({
           {truncatedTitle || "lorem ipsum dolor sir amet"}
         </p>
         <p className="text-gray-700 text-base">
-          {truncatedDescription || "lorem ipsum dolor sir amet hihi"}
+          {truncatedDescription
+            ? truncatedDescription.length >= 120
+              ? truncatedDescription.slice(0, 120)
+              : truncatedDescription
+            : "lorem ipsum"}
         </p>
       </div>
     </div>
