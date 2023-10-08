@@ -3,9 +3,10 @@ import React, { useState } from "react";
 
 interface SearchInputProps {
   onSearch: (query: string) => void;
+  placeHolder: string;
 }
 
-const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
+const SearchInput: React.FC<SearchInputProps> = ({ onSearch, placeHolder }) => {
   const [query, setQuery] = useState("");
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -35,7 +36,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
       <input
         className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
         type="text"
-        placeholder="Search something.."
+        placeholder={placeHolder}
         value={query}
         onChange={handleInputChange}
       />
