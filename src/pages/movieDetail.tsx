@@ -13,7 +13,9 @@ interface Movie {
   runtime: number;
   vote_average: number;
 }
-
+interface Genre {
+  name: string;
+}
 const StarRating: React.FC<{ rating: number }> = ({ rating }) => {
   const maxStars = 5;
   const roundedRating = Math.round(rating / 2); // Adjust the rating scale if needed
@@ -78,18 +80,9 @@ const MovieDetail: React.FC = () => {
     minHeight: "100vh",
   };
 
-  const overlayStyle = {
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    height: "100%",
-  };
-
   return (
     <div style={backgroundImageStyle}>
-      <div style={overlayStyle}></div>
+      <div className="bg-black bg-opacity-80 absolute top-0 left-0 w-full h-full"></div>
       <div className="container mx-auto relative">
         {isLoading ? (
           <p>Loading...</p>
@@ -111,7 +104,8 @@ const MovieDetail: React.FC = () => {
                   Release Date: {movie.release_date}
                 </p>
                 <p className="text-gray-300 text-sm mb-2">
-                  Genres: {movie.genres.map((genre) => genre.name).join(", ")}
+                  Genres:{" "}
+                  {movie.genres.map((genre: Genre) => genre.name).join(", ")}
                 </p>
                 <p className="text-lg leading-relaxed">{movie.overview}</p>
                 <p className="text-gray-300 text-sm mt-4">
