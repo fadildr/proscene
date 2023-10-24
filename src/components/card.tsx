@@ -15,7 +15,7 @@ const Card: React.FC<CardProps> = ({
   imageSrc,
   title,
   description,
-  isNotHome,
+
   id,
   type,
 }) => {

@@ -123,6 +123,8 @@ export default function Movies() {
             <div className="flex justify-center w-full ">
               <SmallLoading />
             </div>
+          ) : isError ? (
+            <div>Error loading data</div>
           ) : (
             <div className="text-center">Data {searchQuery} not found</div>
           )}
