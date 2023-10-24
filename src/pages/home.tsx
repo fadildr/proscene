@@ -23,7 +23,7 @@ export default function Home() {
     <>
       <div className="mt-20">
         <div className="mb-12 " id="trending">
-          <div className="container flex justify-between mx-auto px-0 mb-10">
+          <div className="container flex justify-between items-center mx-auto px-10 mb-10 ">
             <h1 className="text-[30px] font-bold">Trending</h1>
             <Link
               to="/trending"
@@ -33,7 +33,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="container-fluid mx-auto px-0">
-            <div className="flex overflow-x-scroll  gap-7 scrollbar-hide">
+            <div className="flex overflow-x-scroll  gap-7 md:gap-14 scrollbar-hide">
               {dataTrending.map((trending: MovieInfo, index: number) => (
                 <div
                   className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 ${
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mb-12" id="movies">
-          <div className="container flex justify-between mx-auto px-0 mb-10">
+          <div className="container flex justify-between items-center mx-auto px-10 mb-10">
             <h1 className="text-[30px] font-bold">Movies</h1>
             <Link
               to="/movies"
@@ -64,7 +64,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="container-fluid mx-auto px-0">
-            <div className="flex overflow-x-scroll  gap-7 scrollbar-hide">
+            <div className="flex overflow-x-scroll  gap-7 md:gap-14 scrollbar-hide">
               {dataMovies.map((movie: MovieInfo, index: number) => (
                 <div
                   className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 ${
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </div>
         <div className="mb-12" id="series">
-          <div className="container flex justify-between mx-auto px-0 mb-10">
+          <div className="container flex justify-between items-center mx-auto px-10 mb-10">
             <h1 className="text-[30px] font-bold">TV Series</h1>
             <Link
               to="/series"
@@ -95,7 +95,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="container-fluid mx-auto px-0">
-            <div className="flex overflow-x-scroll  gap-7 scrollbar-hide">
+            <div className="flex overflow-x-scroll  gap-7 md:gap-14 scrollbar-hide">
               {dataSeries.map((series: MovieInfo, index: number) => (
                 <div
                   className={`w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 ${

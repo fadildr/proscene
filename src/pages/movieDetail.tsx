@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useMovieDetails } from "../service/movies";
-
+import SmallLoading from "../components/smallLoading";
 interface Movie {
   id: number;
   title: string;
@@ -83,22 +83,22 @@ const MovieDetail: React.FC = () => {
   return (
     <div style={backgroundImageStyle}>
       <div className="bg-black bg-opacity-80 absolute top-0 left-0 w-full h-full"></div>
-      <div className="container mx-auto relative">
+      <div className="container mx-auto my-0 relative pt-[85px]">
         {isLoading ? (
-          <p>Loading...</p>
+          <SmallLoading />
         ) : isError ? (
           <p>Error fetching data</p>
         ) : (
-          <div className="pt-24">
-            <div className="flex flex-col lg:flex-row items-center lg:justify-between content">
+          <div className="m-6  lg:mt-0 lg:ml-6">
+            <div className="flex flex-col lg:flex-row items-center justify-between  content">
               <div className="lg:w-1/3 ">
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={movie.title}
-                  className="rounded-lg shadow-lg h-auto max-h-[550px]"
+                  className="rounded-lg shadow-lg h-auto max-h-[500px]"
                 />
               </div>
-              <div className="m-6 p-5 lg:mt-0 lg:ml-6 lg:w-2/3 text-white  bg-black bg-opacity-50 backdrop-blur-lg  rounded-lg ">
+              <div className=" lg:w-2/3 text-white p-5  bg-black bg-opacity-50 backdrop-blur-lg  rounded-lg ">
                 <h1 className="text-3xl font-semibold mb-4">{movie.title}</h1>
                 <p className="text-gray-300 text-sm mb-2">
                   Release Date: {movie.release_date}
@@ -131,7 +131,6 @@ const MovieDetail: React.FC = () => {
                     </button>
                   )}
                 </div>
-                {/* Add more movie details here */}
               </div>
             </div>
           </div>

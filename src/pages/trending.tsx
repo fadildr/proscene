@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useQuery } from "react-query";
 import Card from "../components/card";
@@ -110,10 +111,10 @@ export default function Trending() {
         </div>
       </div>
       <div className="mt-44">
-        <div className="container mx-auto px-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {dataTrending.length > 0 ? (
-              dataTrending.map((trending: MovieInfo) => (
+        <div className="container mx-auto px-0 lg:px-5 ">
+          {dataTrending.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {dataTrending.map((trending: MovieInfo) => (
                 <div
                   key={trending.id}
                   className="mx-auto px-0 flex justify-center"
@@ -127,22 +128,23 @@ export default function Trending() {
                     description={trending.overview}
                   />
                 </div>
-              ))
-            ) : isLoading ? (
-              <div className="flex justify-center w-full bg-primary-50">
-                <SmallLoading />
-              </div>
-            ) : isError ? (
-              <div>Error loading data</div>
-            ) : (
-              <div className="text-center">Data {searchQuery} not found</div>
-            )}
-          </div>
+              ))}
+            </div>
+          ) : isLoading ? (
+            <div className="flex justify-center w-full ">
+              <SmallLoading />
+            </div>
+          ) : isError ? (
+            <div>Error loading data</div>
+          ) : (
+            <div className="text-center">Data {searchQuery} not found</div>
+          )}
+
           <div
             ref={loadMoreRef}
-            className={`${isLoading && "hidden"} flex justify-center`}
+            className={`${isLoading && "hidden"} flex justify-center w-full`}
           >
-            <SmallLoading />
+            {dataTrending.length && <SmallLoading />}
           </div>
         </div>
       </div>
