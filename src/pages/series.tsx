@@ -16,7 +16,7 @@ export default function Series() {
   const debouncedSearchQuery = useDebounce(searchQuery, 800);
   const loadMoreRef = useRef(null);
   const [dataSeries, setDataSeries] = useState<MovieInfo[]>([]);
-  const filterOptions = ["Popular", "Top Rated", "Upcoming", "Now Playing"];
+  const filterOptions = ["Popular", "Top Rated", "Airing Today", "On the air"];
 
   const fetchData = async () => {
     try {
