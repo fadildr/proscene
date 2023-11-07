@@ -33,6 +33,7 @@ const Dropdown: React.FC<DropdownProps> = ({
         }`}
         type="button"
         disabled={isDisabled}
+        data-testId="dropdown-button"
       >
         {selectedFilter}
         <svg

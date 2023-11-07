@@ -31,17 +31,12 @@ const Card: React.FC<CardProps> = ({
   return (
     <div
       className={
-        //  ${ isNotHome ? "w-[350px] h-[450px]" : ""}
         " w-[350px] h-[450px] md:w-[300px] md:h-[500px] rounded overflow-hidden shadow-xl  mb-4 "
       }
-      // className={`${
-      //   isNotHome ? "w-[350px] h-[450px]" : "w-[200px] h-[350px]"
-      // } md:w-[300px] md:h-[500px] rounded overflow-hidden shadow-xl  mb-4 bg-slate-600`}
     >
       <img
         src={imageSrc ? `https://image.tmdb.org/t/p/w500/${imageSrc}` : Avatar}
         alt={title}
-        // className="w-full h-52 md:h-80"
         className={"h-80 w-full bg-slate-400"}
       />
       <div className="px-6 py-4">
