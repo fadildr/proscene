@@ -89,7 +89,7 @@ In the project directory, you can run the following scripts:
 The project structure follows a conventional React.js setup:
 
 ```
-country-engine/
+proscene/
   ├── public/                  # Public assets
   ├── src/                     # Application source code
   │   ├── assets/              # Assets for font and image
